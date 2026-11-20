@@ -1,0 +1,22 @@
+:root{font:16px/1.5 system-ui,sans-serif;color:#30150d;background:#fff8ef}*{box-sizing:border-box}body{margin:0}header{background:#871507;color:white;padding:16px max(5vw,20px);display:flex;align-items:center;gap:15px;font-weight:750}header img{width:55px}main{max-width:800px;margin:auto;padding:24px 16px 64px}.hero{background:linear-gradient(130deg,#710c0b,#b33b00);color:white;border-radius:18px;padding:26px;display:flex;align-items:center;justify-content:space-between;gap:14px}.hero img{width:27%;max-width:140px;border-radius:6px}h1{font-size:clamp(28px,6vw,52px);line-height:1.04;margin:.3em 0}h2{font-size:22px}section,fieldset{background:white;border:1px solid #decabc;border-radius:14px;margin:18px 0;padding:20px}label{display:block;margin:10px 0 4px;font-weight:600}input,select{width:100%;padding:10px;border:1px solid #a68a7c;border-radius:7px;font:inherit}input[type=checkbox]{width:auto}button{background:#962e09;color:#fff;border:0;padding:11px 16px;border-radius:8px;font:inherit;font-weight:650;cursor:pointer;margin:7px 5px 0 0}button:disabled{opacity:.55;cursor:default}.secondary{background:#f4e8dd;color:#632308}.price{font-weight:bold}del{color:#745e50;margin-right:7px}.total{font-size:1.4rem;font-weight:800}output,[role=status]{display:block;color:#7d210b;white-space:pre-line}fieldset{animation:appear .2s ease-out}small{display:block}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #2164aa}@keyframes appear{from{opacity:.5;transform:translateY(4px)}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+main, fieldset, .hero > div { min-width: 0 }
+input, select { min-width: 0; max-width: 100%; min-height: 44px; background: white; color: inherit }
+input[type=checkbox] { min-height: 0; width: 20px; height: 20px; vertical-align: middle }
+button { min-height: 44px; touch-action: manipulation }
+output, [role=status], #account, label, #prices { overflow-wrap: anywhere }
+input:user-invalid, select:user-invalid { border: 2px solid #a32113 }
+legend { font-weight: 700; color: #782407; padding: 0 5px }
+@media (max-width: 600px) {
+  main { padding: 12px 10px 40px }
+  header { padding: 10px 14px }
+  header img { width: 44px }
+  section { padding: 14px; margin: 12px 0 }
+  fieldset { padding: 12px; margin: 12px 0 }
+  .hero { padding: 16px; gap: 8px }
+  .hero img { width: 24% }
+  button { display: block; width: 100%; margin: 10px 0 0 }
+}
+#timers:not([hidden]) { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; margin-top: 12px }
+#timers > div { padding: 12px 16px; border-left: 3px solid #a4340a; background: #ffedda; border-radius: 5px }
+#timers strong { display:block; font-size:clamp(16px,3vw,24px); font-variant-numeric: tabular-nums }
+@media(max-width:420px){#timers:not([hidden]){grid-template-columns:1fr}#timers > div{padding:8px 12px}}
